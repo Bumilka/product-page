@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>IAI - web page</title>
+    <title>produxt-page</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="produktPage">
+    <div class="productPage">
         <header class="menuContainer">
             <nav class="menuTop">
                 <ul class="topLinks">
@@ -30,12 +30,10 @@
             </nav>
 
             <nav class="menuMain">
-                <div class="mainLogo"><img src="image/top/logo.png" /></div>
+                <div class="mainLogo"><img src="image/top/logo.png" class="mainLogo" herf="/" /></div>
                 <div class="searchContainer">
-
                     <input type="text" placeholder="Wpisz czego szukasz..." name="search">
                     <button type="submit"><img src="image/top/search.png" class="iconSearch" /></button>
-
                 </div>
                 <div class="loginContainer">
                     <div class="changeLanguage">
@@ -52,9 +50,9 @@
             </nav>
 
             <nav class="menuCategories">
-                <li><a herf="#">GOTOWE ZESTAWY DO GRY &#10093;</a></li>
-                <li><a herf="#">SPRZĘT &#10093; </a></li>
-                <li><a herf="#">ODZIEŻ &#10093;</a></li>
+                <li><a herf="#">GOTOWE ZESTAWY DO GRY &#709;</a></li>
+                <li><a herf="#">SPRZĘT &#709;</a></li>
+                <li><a herf="#">ODZIEŻ &#709;</a></li>
                 <li><a herf="#">KULKI</a></li>
                 <li><a herf="#">WYPRZEDAŻE</a></li>
             </nav>
@@ -65,56 +63,50 @@
                 <li><a herf="#">Sprzęt &#187; </a></li>
                 <li><a herf="#"> <b>Marker Tippman FT-50 lite</b></a></li>
             </nav>
-
         </header>
 
         <div class="productContainer">
 
             <section class="productProjector">
                 <div class="productSlider">
-                    
-                    
+
                     <!-- Image text 
                         <div class="caption-container">
                             <p id="caption"></p>
                         </div>
                     -->
-                    
-                    <!-- Thumbnail images -->
-                    <div class="row">
-                            <div>
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            </div>
-                        <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(1)" alt="The Woods">
+                    <div class="slidersSmallImage">
+                        <div class="prevContainer">
+                            <a class="prev" onclick="plusSlides(-1)">&#708;</a>
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(2)" alt="Cinque Terre">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(1)" alt="small-image">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(3)" alt="Mountains and fjords">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(2)" alt="small-image">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(4)" alt="Northern Lights">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(3)" alt="small-image">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(5)" alt="Nature and sunrise">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(4)" alt="small-image">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:100%"
-                                onclick="currentSlide(6)" alt="Snowy Mountains">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(5)" alt="small-image">
                         </div>
-                        <div>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            </div>
+                        <div class="column">
+                            <img class="demo cursor" src="image/projector/product-item-small.png" style="width:80px"
+                                onclick="currentSlide(6)" alt="small-image">
+                        </div>
+                        <div class="nextContainer">
+                            <a class="next" onclick="plusSlides(1)">&#709;</a>
+                        </div>
                     </div>
-
-                    <!-- Full-width images with number text -->
                     <div>
                         <div class="mySlides">
                             <div class="numbertext">PROMOCJA</div>
@@ -135,7 +127,6 @@
                             <div class="numbertext">PROMOCJA 3</div>
                             <img src="image/projector/product-item-big.png" style="width:100%">
                         </div>
-
                         <div class="mySlides">
                             <div class="numbertext">PROMOCJA 4</div>
                             <img src="image/projector/product-item-big.png" style="width:100%">
@@ -150,32 +141,54 @@
 
                 <div class="productInfo">
                     <div class="productTitle">
-                        <div>
-                            <p>MARKER TIPPMANN FT-50</p>
-                            <p>LITE 50 CAL RENTAL (BLACK)</p>
+                        <div class="productName">
+                            <a><b> MARKER TIPPMANN FT-50 <br />LITE 50 CAL RENTAL (BLACK)</b></a>
                         </div>
-                        <div>
-                            <p>PROCUDENT:</p>
-                            <p>KOD PRODUKTU:</p>
+                        <div class="producentTitle">
+                            <a>PRODUCENT: <b style="color:red">Dye</b></a>
+                            <a herf="#">KOD PRODUKTU: <b>45687412358635412</b></a>
                         </div>
                     </div>
                     <div class="productColor">
                         <div>
-                            <p>KOLOR:</p>
+                            <p><b>KOLOR:</b></p>
                         </div>
-                        <div>
-                            <div><img src="" alt="product-color-item" /></div>
-                            <div><img src="" alt="product-color-item" /></div>
-                            <div><img src="" alt="product-color-item" /></div>
-                            <div><img src="" alt="product-color-item" /></div>
-                            <div><img src="" alt="product-color-item" /></div>
-                            <div><img src="" alt="product-color-item" /></div>
+                        <div class="productColorChange">
+                            <a herf="#">
+                                <img src="image/projector/product-item-small.png" alt="product-color-item"
+                                    class="productColorChangeImage" />
+                            </a>
+                            <a herf="#">
+                                <img src="image/projector/product-item-small.png" alt="product-color-item"
+                                    class="productColorChangeImage" />
+                            </a>
+                            <a herf="#">
+                                <img src="image/projector/product-item-small.png" alt="product-color-item"
+                                    class="productColorChangeImage" />
+                            </a>
+                            <a herf="#">
+                                <img src="image/projector/product-item-small.png" alt="product-color-item"
+                                    class="productColorChangeImage" />
+                            </a>
+                            <a herf="#">
+                                <img src="image/projector/product-item-small.png" alt="product-color-item"
+                                    class="productColorChangeImage" />
+                            </a>
                         </div>
                     </div>
-                    <div class="inputData">
+                    <div class="selectParameters">
                         <div>
                             <p>DŁUGOSC LUFY :</p>
-                            <input />
+                            <div>
+                                <label>
+                                    <input list="browsers" name="myBrowser" placeholder=" 120cm" />
+                                </label>
+                                <datalist id="browsers">
+                                    <option value="120 cm" />
+                                    <option value="130 cm" />
+                                    <option value="140cm" />
+                                </datalist>
+                            </div>
                         </div>
                         <div>
                             <p>KALIBER :</p>

@@ -3,50 +3,53 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
-}
-li{
-  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* menu */
-.menuTop{
-  background: #333;
-  height: 30px;  
+/* MENU CONTAINER*/
+header{
+  background: #ccc;
 }
-.topLinks{
+.menuTop {
+  background: #333;
+  height: 30px;
+}
+.topLinks {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   list-style-type: none;
   font-size: 10px;
   color: white;
   padding-top: 7px;
 }
-.linksContact{
+.linksContact {
   margin-right: 50px;
 }
-.iconMenu{
+.iconMenu {
   width: 7px;
   margin-right: 10px;
 }
-
-.menuMain{
+.menuMain {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   padding-block-end: 20px;
-  background-image: url("./image/top/background-1.png");
-  background: #ccc;
+  background: url(./image/top/background-1.png) repeat-x center top;
 }
-.searchContainer{
+.mainLogo{
+  height: 30px;
+  cursor: pointer;
+}
+.searchContainer {
   padding: 6px 10px;
   font-size: 17px;
   border: none;
   cursor: pointer;
 }
-input[type=text] {
+input[type="text"] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -62,122 +65,149 @@ input[type=text] {
 .searchContainer button:hover {
   background: #ccc;
 }
-.iconSearch{
+.iconSearch {
   height: 10px;
 }
-.loginContainer{
+.loginContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   font-size: 12px;
 }
 
-.menuCategories{
+.menuCategories {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
+  list-style-type: none;
+  padding-top: 20px;
+  padding-block-end: 20px;
+  background: white;
+}
+.menuCategories>li{
+  margin-right: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menuBreadCrumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  list-style-type: none;
+  padding-top: 5px;
+  padding-block-end: 5px; 
+  background: url(./image/top/background-down.png) repeat-x center top;
+}
+.menuBreadCrumb>li{
+  font-size:12px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 
-}
-.menuBreadCrumb{
+/*PRODUCT CONTAINER*/
+.productProjector {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.productProjector
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 /*slider*/
-.productSlider{
+.productSlider {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 50%;
+  background: yellow;
 }
 .mySlides {
   display: none;
 }
-
-.cursor {
-  cursor: pointer;
+.prevContainer, .nextContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-block-end: 10px;
+  padding-block-start: 10px;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color:black;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  font-size: 20px
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
 .numbertext {
-  color:white;
-  background:red;
+  color: white;
+  background: red;
   font-size: 12px;
   padding: 8px 12px;
   float: right;
 }
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row{
+.slidersSmallImage {
   display: flex;
   flex-direction: column;
 }
-
-.row:after {
+.slidersSmallImage:after {
   content: "";
   display: table;
   clear: both;
-  background: red;
 }
-
-/* Six columns side by side */
 .column {
   float: left;
   width: 16.66%;
 }
-
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
 }
-
-.active,
-.demo:hover {
+.active{
   opacity: 1;
-  background: red;
+  border-bottom: 4px solid red;
+  cursor: pointer;
 }
 
+/* product info*/
+.productInfo {
+  background: green;
+  width: 50%;
+  margin-left: 10px;
+}
+.productName{
+  font-size: 20px;
+}
+.producentTitle{
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.producentTitle>a{
+  font-size: 12px;
+  margin-right: 20px;
+}
+.productColorChange {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.productColorChangeImage {
+  margin-right: 20px;
+  width: 100px;
+  border: 20px;
+  padding-right: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.productColorChangeImage:active{
+  border-bottom: 4px solid red;
+  cursor: pointer;
+}
+.selectParameters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px;
+}
 
 /*footer - react*/
 footer {
