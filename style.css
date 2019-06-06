@@ -1,0 +1,297 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+li{
+  text-decoration: none;
+}
+
+/* menu */
+.menuTop{
+  background: #333;
+  height: 30px;  
+}
+.topLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 10px;
+  color: white;
+  padding-top: 7px;
+}
+.linksContact{
+  margin-right: 50px;
+}
+.iconMenu{
+  width: 7px;
+  margin-right: 10px;
+}
+
+.menuMain{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+  padding-block-end: 20px;
+  background-image: url("./image/top/background-1.png");
+  background: #ccc;
+}
+.searchContainer{
+  padding: 6px 10px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.searchContainer button {
+  padding: 6px 10px;
+  background: black;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.searchContainer button:hover {
+  background: #ccc;
+}
+.iconSearch{
+  height: 10px;
+}
+.loginContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.menuCategories{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.menuBreadCrumb{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.productProjector
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*slider*/
+.productSlider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:white;
+  background:red;
+  font-size: 12px;
+  padding: 8px 12px;
+  float: right;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  background: red;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  background: red;
+}
+
+
+/*footer - react*/
+footer {
+  display: block;
+  background: url(./image/footer/bg-footer.png) repeat-x center top;
+  background-size: contain;
+  padding-top: 15%;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  margin-top: 10px;
+  clear: both;
+}
+.iaiLogo {
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+.footerLinks a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 769px) {
+  .footerRWD {
+    display: flex;
+    flex-direction: column;
+  }
+  .footerContainerRWD {
+    align-items: center;
+    padding-top: 20px;
+    background: rgb(0, 0, 0);
+    color: white;
+  }
+  .footerContainer {
+    display: none;
+  }
+  .footerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .footerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-bottom: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 770px) {
+  .footerContainers {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 35px;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+    margin-left: 35px;
+    border-right: 1px solid #333;
+  }
+  .footerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-bottom: 17px;
+    padding-left: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .footerLinks a {
+    justify-content: start;
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .footerRWD {
+    display: none;
+  }
+}
