@@ -23,7 +23,7 @@ body {
 
 .titleSection,
 .topLinks,
-.menuMain {
+.menuMain, .productColumn, .leftSide, .priceSection {
   display: flex;
   flex-direction: row;
 }
@@ -194,7 +194,6 @@ input[type="text"] {
   border-bottom: 4px solid red;
   cursor: pointer;
 }
-
 /* product info*/
 .productInfoContainer {
   background: green;
@@ -214,23 +213,52 @@ input[type="text"] {
   font-size: 12px;
   margin-right: 20px;
 }
-.productColorChange {
+.productColor {
+  width: 100%;
+}
+.colorColumn {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  width: 100%;
 }
-.productColorChangeImage {
-  margin-right: 20px;
-  width: 100px;
+.rowColor {
+  float: left;
+  width: 16.66%;
+}
+.changeColorImage {
+  margin-right: 10px;
+  width: 50%;
   border: 20px;
   padding-right: 10px;
   border: 1px solid grey;
   cursor: pointer;
 }
-.productColorChangeImage:active {
+.changeColorImage:active {
   border-bottom: 4px solid red;
   cursor: pointer;
 }
+.productColumn{
+  justify-content: space-between;
+  font-size: 10px;
+  width: 100%;
+  padding-top: 7px;
+}
+.leftSide, .rightSide{
+  width: 100%;
+}
+.rightSide{
+  text-align: end;
+}
+.leftSide>img{
+ height: 70%;
+ padding-right: 7px;
+}
+.priceSection{
+  justify-content: start;
+}
+
+
 .selectParameters {
   display: flex;
   flex-direction: row;
@@ -256,10 +284,41 @@ input[type="text"] {
 .dataColumn {
   width: 65%;
 }
-
 .parametersColumn {
   background: #333;
   width: 35%;
+}
+select {
+  width: 200px;
+  height: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/*information*/
+.informationSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  font-size: 10px;
+  border-style: solid;
+  border-width: 1px;
+  list-style-type: none;
+}
+.informationItems {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-block-end: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.informationImage {
+  margin-right: 10px;
+  height: 50%;
 }
 
 /*accordion*/
@@ -287,13 +346,12 @@ input[type="text"] {
   width: 60%;
   font-size: 10px;
 }
-.questionButton{
+.questionButton {
   border: none;
   padding: 10px;
   color: white;
   background: url(./image/desc_section/background.png) repeat-x center top;
 }
-
 /*blog section*/
 .blogArticle {
   display: flex;
@@ -403,7 +461,6 @@ footer {
     justify-content: center;
     list-style: none;
     margin-bottom: 30px;
-    margin-left: 35px;
     border-right: 1px solid #333;
   }
   .footerTitle {
@@ -411,7 +468,6 @@ footer {
     flex-direction: row;
     justify-content: start;
     padding-bottom: 17px;
-    padding-left: 40px;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -420,7 +476,6 @@ footer {
   }
   .footerLinks a {
     justify-content: start;
-
     list-style-type: none;
     text-decoration: none;
     color: #fff;
