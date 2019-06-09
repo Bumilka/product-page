@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>produxt-page</title>
+    <title>PRODUCT PAGE</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -28,7 +28,6 @@
                     </li>
                 </ul>
             </nav>
-
             <nav class="menuMain">
                 <div class="mainLogo"><img src="image/top/logo.png" class="mainLogo" herf="/" /></div>
                 <div class="searchContainer">
@@ -49,11 +48,30 @@
                 </div>
             </nav>
             <nav class="menuCategories">
-                <li><a herf="#">GOTOWE ZESTAWY DO GRY &#709;</a></li>
-                <li><a herf="#">SPRZĘT &#709;</a></li>
-                <li><a herf="#">ODZIEŻ &#709;</a></li>
-                <li><a herf="#">KULKI</a></li>
-                <li><a herf="#">WYPRZEDAŻE</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">GOTOWE ZESTAWY DO GRY</button>
+                </div>
+
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        SPRZĘT
+                        <img src="image/attow-down.png" />
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">LINK 1</a>
+                        <a href="#">LINK 2</a>
+                        <a href="#">LINK 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">ODZIEŻ</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">KULKI</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">WYPRZEDAŻE</button>
+                </div>
             </nav>
             <nav class="menuBreadCrumb">
                 <li><a herf="#">Strona główna &#187;</a></li>
@@ -128,14 +146,12 @@
                             <div class="numbertext">PROMOCJA 4</div>
                             <img src="image/projector/product-item-big.png" style="width:100%">
                         </div>
-
                         <div class="mySlides">
                             <div class="numbertext">PROMOCJA 5</div>
                             <img src="image/projector/product-item-big.png" style="width:100%">
                         </div>
                     </div>
                 </div>
-
                 <div class="productInfoContainer">
                     <div class="productTitle">
                         <div class="productName">
@@ -177,7 +193,7 @@
                             </div>
                         </div>
                         <div class="selectParameters">
-                            <div>
+                            <div style="width: 50%">
                                 <p style="font-size: 12px">DŁUGOSC LUFY:</p>
                                 <form>
                                     <select>
@@ -188,7 +204,7 @@
                                     </select>
                                 </form>
                             </div>
-                            <div>
+                            <div style="width: 50%">
                                 <p style="font-size: 12px">KALIBER:</p>
                                 <form>
                                     <select>
@@ -205,32 +221,28 @@
                                 <img src="image/projector/available.png" alt=" label-delivery" />
                                 <div>
                                     <a>Dostępny na magazynie (14 szt)</a>
-                                    <b>Wysyłka dzsiaj</b>
+                                    <b>Wysyłka dzisiaj</b>
                                 </div>
                             </div>
                             <div class="rightSide">
                                 <p style="color:red"><b>SPRAWDŹ CZAS I KOSZTY DOSTAWY</b></p>
                             </div>
                         </div>
-
-                        <div class="priceSection">
+                        <div class="addToShopBagContainer">
                             <div style="width: 40%">
                                 <a style="font-size:10px; color:gray; text-decoration: line-through;">1 499,00
                                     zł<br></a>
-                                <a style="font-size:20px"><b>1278,00 zł</b></a>
+                                <a style="font-size:21px"><b>1278,00 zł</b></a>
                             </div>
-                            <div style="width: 20%">
-                                <div class="container">
-                                    <button data-decrease>-</button>
-                                    <input data-value type="text" value="1" disabled />
-                                    <button data-increase>+</button>
-                                </div>
-                            </div>
-                            <div style="width: 40%">
+                            <form class="addToShopBagForm">
+                                <input type="button" onclick="decrementValue()" value="-" />
+                                <input type="text" id="number" value="1" />
+                                <input type="button" onclick="incrementValue()" value="+" />
+                            </form>
+                            <div class="addToShopBagButton">
                                 <button>DODAJ DO KOSZYKA</button>
                             </div>
                         </div>
-
                         <div class="productColumn">
                             <div class="leftSide">
                                 <img src="image/projector/nego.jpg" alt=" label-delivery" />
@@ -280,7 +292,6 @@
                         </div>
                     </div>
             </section>
-
             <section class="hotspotSection">
                 <div class="titleSection">
                     <img src="image/dot.png" class="dotSection" alt="dot">
@@ -319,7 +330,6 @@
                     </article>
                 </div>
             </section>
-
             <section class="productDecs">
                 <div class="dataColumn">
                     <div class="titleSection">
@@ -408,16 +418,15 @@
                         </button>
                     </div>
                 </div>
-                <div class="parametersColumn" style="padding:20px; height: 70%">
+                <div class="parametersColumn">
                     <div class="parameterContainer">
                         <div>
                             <img herf="#" alt="baner" src="image/desc_section/baner.png"
                                 style="width: 100%; cursor: pointer;" />
                         </div>
-                        <div class=""
-                            style="font-size: 12px; padding-left:20px; background: white; padding-block-end: 15px;">
+                        <div class="parameterBlog">
                             <p style="padding-top:30px;">Numer seryjny:<br /><b>111000</b></p>
-                            <p>Numer seryjny:<br /><b>111000</b></p>
+                            <p>Numer seryjny:<br/><b>111000</b></p>
                             <p>Model:<br /><b>TIPPMANN FT-50 LITE 50</b></p>
                             <p>Wykończenie:<br /><b>Czarny mat</b></p>
                             <p>Kalider:<br /><b>66 LR HV</b></p>
@@ -426,139 +435,191 @@
                             <p>Siła nacisku spustu:<br /><b>1.8 kg/ 4 Ib</b></p>
                             <p>Wymiary:<br /><b>1200X123mm</b></p>
                         </div>
-                        <div>
-                            <img src="image/desc_section/splash.png" />
-                        </div>
                     </div>
                 </div>
-            </section>
-            </section>
-
-            <section class="blogProductSection">
-                <div class="titleSection" style="padding-top: 30px">
-                    <img src="image/dot.png" class="dotSection" alt="dot">
-                    <p><b>PORADY NASZEGO EKSPERTA</b></p>
-                </div>
-
-                <div class="blogArticle">
-                    <article>
-                        <p style="font-size: 14px"><b>Jak stworzyć samemu farby do gry ?</b></P>
-                        <div class="post">
-                            <img src="image/podady_blog/news-post1.png" />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-
-                            </p>
-                        </div>
-                    </article>
-                    <article>
-                        <P style="font-size: 14px"><b>Jak dobrać naboje z fajbą do mojego sprzętu ?</b></P>
-                        <div class="post">
-                            <img src="image/podady_blog/news-post2.png" />
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor
-                                sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
         </div>
+        </section>
+        </section>
+        <section class="blogProductSection">
+            <div class="titleSection" style="padding-top: 30px">
+                <img src="image/dot.png" class="dotSection" alt="dot">
+                <p><b>PORADY NASZEGO EKSPERTA</b></p>
+            </div>
+            <div class="blogArticle">
+                <article>
+                    <p style="font-size: 14px"><b>Jak stworzyć samemu farby do gry ?</b></P>
+                    <div class="post">
+                        <img src="image/podady_blog/news-post1.png" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
 
-        <!-- react-->
-        <footer class="footerContainer">
-            <div class="footerContainers">
-                <ul class="footerContainer">
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <P style="font-size: 14px"><b>Jak dobrać naboje z fajbą do mojego sprzętu ?</b></P>
+                    <div class="post">
+                        <img src="image/podady_blog/news-post2.png" />
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor
+                            sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <!-- react-->
+    <footer class="footerContainer">
+        <div class="footerContainers">
+            <ul class="footerContainer">
+                <li>
+                    <span class="footerTitle">
+                        <span>INFORMACJE</span>
+                    </span>
+                    <ul class="footerLinks">
+                        <li>
+                            <a href="#" title="Informacje o sklepie">
+                                <span> Informacje o sklepie </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Wysyłka">
+                                <span> Wysyłka </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Regulamin">
+                                <span> Regulamin </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Wysyłka">
+                                <span> Wysyłka </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Polityka o prywatności">
+                                <span> Polityka o prywatności </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Odstapienie od umowy">
+                                <span> Odstapienie od umowy </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footerContainer">
+                <li>
+                    <span class="footerTitle">
+                        <span>MOJE KONTO</span>
+                    </span>
+                    <ul className="footerLinks">
+                        <li>
+                            <a href="#" title="Zarejestruj sie ">
+                                <span> Zarejestruj sie </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Moje zamówienia ">
+                                <span> Moje zamówienia </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="RKoszyk">
+                                <span> Koszyk </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Ulubione">
+                                <span> Ulubione </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Historia transakcji">
+                                <span> Historia transakcji </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Odstapienie od umowy">
+                                <span> Odstapienie od umowy </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footerContainer">
+                <li>
+                    <span class="footerTitle">
+                        <span>KONTAKT</span>
+                    </span>
+                    <ul className="footerLinks">
+                        <li>
+                            <a href="#" title="+48 574 0046 421">
+                                <span> +48 574 0046 421 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Email">
+                                <span> kontakt@assasinarmy.pl </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Regulamin">
+                                <span> <img src="/image/footer/fb.png" /> </span>
+                                <span> <img src="image/footer/insta.png" /> </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footerContainer">
+                <li>
+                    <span class="footerTitle">
+                        <span>MOJE ZAMÓWIENIA</span>
+                    </span>
+                    <ul class="footerLinks">
+                        <li>
+                            <a href="#" title="Sprawdź status zamowienia">
+                                <span> Sprawdź status zamowienia </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Śledź przesyłkę">
+                                <span> Śledź przesyłkę </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Regulamin">
+                                <span> Regulamin </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Zwroty">
+                                <span> Zwroty </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Informacja o wymianie">
+                                <span> Informacja o wymianie </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footerRWD">
+                <ul class="footerContainerRWD">
                     <li>
-                        <span class="footerTitle">
-                            <span>INFORMACJE</span>
-                        </span>
                         <ul class="footerLinks">
-                            <li>
-                                <a href="#" title="Informacje o sklepie">
-                                    <span> Informacje o sklepie </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Wysyłka">
-                                    <span> Wysyłka </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Regulamin">
-                                    <span> Regulamin </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Wysyłka">
-                                    <span> Wysyłka </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Polityka o prywatności">
-                                    <span> Polityka o prywatności </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Odstapienie od umowy">
-                                    <span> Odstapienie od umowy </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footerContainer">
-                    <li>
-                        <span class="footerTitle">
-                            <span>MOJE KONTO</span>
-                        </span>
-                        <ul className="footerLinks">
-                            <li>
-                                <a href="#" title="Zarejestruj sie ">
-                                    <span> Zarejestruj sie </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Moje zamówienia ">
-                                    <span> Moje zamówienia </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="RKoszyk">
-                                    <span> Koszyk </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Ulubione">
-                                    <span> Ulubione </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Historia transakcji">
-                                    <span> Historia transakcji </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Odstapienie od umowy">
-                                    <span> Odstapienie od umowy </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footerContainer">
-                    <li>
-                        <span class="footerTitle">
-                            <span>KONTAKT</span>
-                        </span>
-                        <ul className="footerLinks">
                             <li>
                                 <a href="#" title="+48 574 0046 421">
                                     <span> +48 574 0046 421 </span>
@@ -571,79 +632,24 @@
                             </li>
                             <li>
                                 <a href="#" title="Regulamin">
-                                    <span> <img src="/image/footer/fb.png" /> </span>
+                                    <span> <img src="./image/footer/fb.png" /> </span>
                                     <span> <img src="image/footer/insta.png" /> </span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <ul class="footerContainer">
-                    <li>
-                        <span class="footerTitle">
-                            <span>MOJE ZAMÓWIENIA</span>
-                        </span>
-                        <ul class="footerLinks">
-                            <li>
-                                <a href="#" title="Sprawdź status zamowienia">
-                                    <span> Sprawdź status zamowienia </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Śledź przesyłkę">
-                                    <span> Śledź przesyłkę </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Regulamin">
-                                    <span> Regulamin </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Zwroty">
-                                    <span> Zwroty </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Informacja o wymianie">
-                                    <span> Informacja o wymianie </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="footerRWD">
-                    <ul class="footerContainerRWD">
-                        <li>
-                            <ul class="footerLinks">
-                                <li>
-                                    <a href="#" title="+48 574 0046 421">
-                                        <span> +48 574 0046 421 </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Email">
-                                        <span> kontakt@assasinarmy.pl </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Regulamin">
-                                        <span> <img src="./image/footer/fb.png" /> </span>
-                                        <span> <img src="image/footer/insta.png" /> </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
             </div>
-            <div class="iaiLogo">
-                <img src="image/footer/iai.png" />
-            </div>
-        </footer>
+        </div>
+        <div class="iaiLogo">
+            <img src="image/footer/iai.png" />
+        </div>
+    </footer>
     </div>
     <script src="js/slideshow.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/incrementButton.js"></script>
+    <script src="js/dropdowns.js"></script>
 </body>
+
 </html>
