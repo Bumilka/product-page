@@ -11,12 +11,19 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
 .topLinks,
 .menuMain,
 .menuCategories,
 .menuBreadCrumb,
-.productContainer, 
-.blogProductSection{
+.productContainer,
+.blogProductSection,
+footer {
   padding-left: 150px;
   padding-right: 150px;
 }
@@ -25,7 +32,8 @@ body {
 .menuMain,
 .productColumn,
 .leftSide,
-.addToShopBagContainer {
+.addToShopBagContainer,
+.shopingBag {
   display: flex;
   flex-direction: row;
 }
@@ -61,13 +69,12 @@ header {
 .menuMain {
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-block-end: 10px;
   background: url(./image/top/background-1.png) repeat-x center top;
 }
 .mainLogo {
   height: 30px;
   cursor: pointer;
+  align-items: center;
 }
 .searchContainer {
   padding: 6px 10px;
@@ -97,8 +104,30 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 9px;
+  text-align: center;
 }
+.shopingBag {
+  background: url(image/top/badge-background.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+.shopingBag > img,
+.price {
+  height: 32px;
+  padding-top: 20px;
+  padding-block-end: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: start;
+}
+.changeLanguage {
+  padding-top: 25px;
+  padding-right: 20px;
+}
+
 .menuCategories {
   display: flex;
   flex-direction: row;
@@ -113,7 +142,7 @@ header {
   padding-top: 16px;
   padding-block-end: 16px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   border: none;
   cursor: pointer;
 }
@@ -148,7 +177,6 @@ header {
 .show {
   display: block;
 }
-
 .menuBreadCrumb {
   display: flex;
   flex-direction: row;
@@ -156,7 +184,8 @@ header {
   list-style-type: none;
   padding-top: 5px;
   padding-block-end: 5px;
-  background: url(./image/top/background-down.png) repeat-x center top;
+  background: #ccc;
+  background-image: url(./image/top/background-down.png);
 }
 .menuBreadCrumb > li {
   font-size: 10px;
@@ -402,6 +431,7 @@ select {
   font-size: 10px;
 }
 .questionButton {
+  cursor: pointer;
   border: none;
   padding: 10px;
   color: white;
@@ -415,10 +445,10 @@ select {
   padding-block-end: 100px;
   padding-left: 150px;
 }
-.parameterBlog{
+.parameterBlog {
   font-size: 12px;
-  padding-left:20px; 
-  background-color: white; 
+  padding-left: 20px;
+  background-color: white;
   /*transform: translate(0% 100%); */
   padding-block-end: 15px;
 }
@@ -443,40 +473,54 @@ select {
 }
 .post > img {
   width: 40%;
+  padding-top: -10px;
 }
 
 /*FOOTER - react*/
 footer {
-  display: block;
   background: url(./image/footer/bg-footer.png) repeat-x center top;
   background-size: contain;
-  padding-top: 15%;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: none !important;
-  margin-top: 10px;
-  clear: both;
+  padding-top: 15%; 
 }
-.iaiLogo {
-  background: rgb(0, 0, 0);
+.footerRow {
+  margin: 0 auto;
+  align-items: flex-start;
+
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.footerLinks a {
-  list-style-type: none;
-  text-decoration: none;
+.footerColumn{
+  align-items: flex-start;
+  text-align: start;
   color: #fff;
-  line-height: 1.5;
+  line-height: 2;
   font-size: 9px;
   letter-spacing: 1px;
+  }
+.footerRWD {
+  display: none;
 }
+.iaiLogo {
+  background: rgb(24, 23, 23);
+  margin-top: -10px;
+  padding-top: 10px;
+  padding-block-end: 10px;
+}
+.iaiLogo > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+}
+/*
 
 @media (max-width: 769px) {
   .footerRWD {
     display: flex;
     flex-direction: column;
   }
-  .footerContainerRWD {
+  .footerColumnRWD {
     align-items: center;
     padding-top: 20px;
     background: rgb(0, 0, 0);
@@ -516,45 +560,4 @@ footer {
     letter-spacing: 1.5px;
   }
 }
-
-@media (min-width: 770px) {
-  .footerContainers {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 35px;
-  }
-  .footerContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 30px;
-    border-right: 1px solid #333;
-  }
-  .footerTitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding-bottom: 17px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-  }
-  .footerLinks a {
-    justify-content: start;
-    list-style-type: none;
-    text-decoration: none;
-    color: #fff;
-    line-height: 1.5;
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-
-  .footerRWD {
-    display: none;
-  }
-}
+*/
